@@ -1,6 +1,25 @@
-import React from 'react'
+import React, {Component} from 'react'
 
- function Search() {
+ class Search extends Component{
+    constructor(props){
+      super(props)
+      this.inputref = React.createRef()
+       this.state = {
+        userdetails:{ },
+       }
+    }
+    getuserdetails = () =>{
+      fetch(`https://api.github.com/users/${this.inputref.current.value}`)
+      .then((response)=>{
+        return response.json()
+      })
+      .then((actualdata)=>{
+        console.log(actualdata);
+        this.props.updatehomestate(actualdata)
+      })
+    }
+
+  render(){
   return (
     
       <div className ="card">
@@ -11,11 +30,11 @@ import React from 'react'
         <div className='card-body' >
             <div className="row">
               <div className="col-8">
-              <input type='text' placeholder='Enter some text ' className='form-control'></input>
+              <input type='text' ref ={this.inputref} placeholder='Enter some text ' className='form-control'></input>
 
               </div>
               <div className="col-4">
-              <button className='btn btn-primary'>Search</button>
+              <button className='btn btn-primary' onClick={this.getuserdetails}>Search</button>
               </div>
             </div>
         </div>
@@ -23,4 +42,5 @@ import React from 'react'
     
   )
 }
+ }
 export default Search

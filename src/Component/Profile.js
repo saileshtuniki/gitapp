@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-function Profile () {
+class Profile extends Component {
+    render(){
     return (
         <div className='card'>
             <div className="card-header">
-                <img  src='https://www.clipartmax.com/png/middle/171-1717870_stockvader-predicted-cron-for-may-user-profile-icon-png.png' width="100 %" height="150 px " />
+            <img  src={this.props.userdata.avatar_url} width="150 %" height="150 px " />
             </div>
             <div className="card-body">
-                <h2>Sailesh T</h2>
+                <h2>{this.props.userdata.name}</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, ipsa.</p>
                 <button className='btn btn-success' >Profile</button>
             </div>
@@ -15,6 +16,6 @@ function Profile () {
         </div>
     )
 }
-
+}
 export default Profile
 
