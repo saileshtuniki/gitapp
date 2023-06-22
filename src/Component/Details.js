@@ -10,10 +10,10 @@ class  Details extends Component{
             </div>
             <div className="card-body">
                 <ul className="list-group">
-                    <li className="list-group-item">login:  {this.props.userdata.login}</li>
-                    <li className="list-group-item">Blog:  {this.props.userdata.blog}</li>
-                    <li className="list-group-item">Location:  {this.props.userdata.location}</li>
-                    <li className="list-group-item">ID:  {this.props.userdata.id}</li>
+                    <li className="list-group-item">Login: <b> {this.props.userdata.login} </b></li>
+                    <li className="list-group-item">Blog: <b> {this.props.userdata.blog} </b></li>
+                    <li className="list-group-item">Location: <b> {this.props.userdata.location}</b></li>
+                    <li className="list-group-item">ID: <b> {this.props.userdata.id}</b></li>
                 </ul>
             </div>
         </div>
