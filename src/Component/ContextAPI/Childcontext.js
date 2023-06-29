@@ -16,6 +16,7 @@ import myContext from './Context'
               <myContext.Consumer>
                 {
                   (userdata) =>{
+                    //userdata === this.state
                     return userdata
                   }
                 }
