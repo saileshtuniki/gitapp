@@ -11,7 +11,9 @@ import "bootstrap/dist/css/bootstrap.css"
 // import Products from './Component/Products';
 // import Lifecycle from './Component/Lifecycle';
 
-import Acopmponent from './Component/contextwithFuncComp/Acopmponent';
+// import Acopmponent from './Component/contextwithFuncComp/Acopmponent';
+import Button from './Component/HOC/Button';
+import Hover from './Component/HOC/Hover';
 
 function App() {
   return (
@@ -21,15 +23,16 @@ function App() {
       {/* < UserProfile /> */}
       {/* < Products /> */}
       {/* <Lifecycle /> */}
-      <div className='container'>
+      {/* <div className='container'>
         <div className="row">
           <div className="col">
               < Acopmponent />  
-          </div>
+          </div> 
         </div>
-      </div>
+      </div> */}
+      < Button />
       < br />
-
+      <Hover />
       {/* < Parent2 /> */}
       <br />
       {/* < Parent /> */}
