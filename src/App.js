@@ -12,8 +12,10 @@ import "bootstrap/dist/css/bootstrap.css"
 // import Lifecycle from './Component/Lifecycle';
 
 // import Acopmponent from './Component/contextwithFuncComp/Acopmponent';
-import Button from './Component/HOC/Button';
-import Hover from './Component/HOC/Hover';
+// import Button from './Component/HOC/Button';
+// import Hover from './Component/HOC/Hover';
+import Users from './Component/HOC2/Users';
+import Emp from './Component/HOC2/Emp';
 
 function App() {
   return (
@@ -30,9 +32,13 @@ function App() {
           </div> 
         </div>
       </div> */}
-      < Button />
+      {/* < Button /> */}
       < br />
-      <Hover />
+      {/* <Hover /> */}
+      <Users/>
+      
+      <Emp />
+
       {/* < Parent2 /> */}
       <br />
       {/* < Parent /> */}
